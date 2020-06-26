@@ -70,19 +70,21 @@
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Introduction}
-  \alert{\Large Frame: LIHLITH project} \par
-  LIHLITH-KIQA, IP: Anselmo Pe\~nas
-  International coordinator: Eneko Agirre
+% ToDo := What is active learning
+\begin{frame}{Introduction: Lifelong Learning}
+  % \metroset{block=fill}
+  \begin{block}{Lifelong Learning}
+    \vspace{0.2cm}
+    \textit{Framework to study how to enable systems to evolve over time, integrating new knowledge with previous one and adapting to new tasks.} \par
 
-  European funded project. PI: by Eneko Agirre. \par
-
-  \textit{Learning to Interact with Humans by \\ Lifelong Interaction with Humans}
-
-  \begin{itemize}
-    \item Develop Question Answering and Dialogue Systems
-    \item Enable them to evolve over time.
-  \end{itemize}
+    Can be applied to multiple learning paradigms and techniques:
+    \begin{itemize}
+      \item Active Learning
+      \item Reinforcement Learning
+      \item Transfer Learning
+      \item Knowledge acquisition
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Introduction: Question Answering}
@@ -90,10 +92,12 @@
   \begin{block}{Question Answering}
     \vspace{0.2cm}
     \textit{Systems that automatically answer questions posed by humans in a natural language} \\
-    \begin{itemize}
-      \item Open world assumption
-      \item Closed world assumption
-    \end{itemize}
+    \begin{alertblock}{Focus}
+      \begin{itemize}
+        \item Based on Knowledge Graphs
+        \item Based on other resources: Set of documents, search engines
+      \end{itemize}
+    \end{alertblock}
     Applications:
     \begin{itemize}
       \item Question Answering Systems are everywhere, from personal assistants to chatbots and IT ticket management.
@@ -102,41 +106,37 @@
 \end{frame}
 
 \note[itemize]{%
-  \item Open world assumption: Virtually, all resources can be used to retrieve the answer
-  \item Closed world assumption: Closed set of resources to answer the posed question. Such as KG, a set of documents, a DB
+  \item Specifically, we work with 
+  \item KG QA
+  \item Extractive QA
+  \item Reading comprehension QA
 }
 
-\begin{frame}{Introduction: Lifelong Learning}
-  % \metroset{block=fill}
-  \begin{block}{Lifelong Learning}
-    \vspace{0.2cm}
-    \textit{Adapt previous knowledge to solve new, unseen problems.} \par
-
-    Can be combined with many algorithms and different forms of learning:
-    \begin{itemize}
-      \item Neural networks
-      \item Topic modeling
-      \item Information Extraction
-      \item Reinforcement Learning
-    \end{itemize}
-  \end{block}
+\begin{frame}{Thesis Frame}
+  Most QA systems:
+  \begin{itemize}
+    \item Work under a closed world assumption, ranking plausible answers
+    \item Learn only during training, becoming stale over time
+    \item Fail to sustain performance in production environments
+  \end{itemize}
+  We focus on Lifelong Learning Question Answering systems, that:
+  \begin{itemize}
+    \item Evolve over time
+    \item Integrate new knowledge with previous one
+    \item Adapt to new tasks
+  \end{itemize}
 \end{frame}
 
 \section{Research Plan}
-\begin{frame}{Research Plan}
+% ToDo := Review RQ 3 (effectiveness)
+\begin{frame}{Research Plan: Objectives}
   \begin{alertblock}{Objectives}
     \begin{itemize}
-      \item Develop systems capable of detecting knowledge gaps
+      \item Develop QA systems sustainable in production environments
+      \item Develop QA systems capable of detecting knowledge gaps
       \item Develop strategies to fill these gaps
       \item Enable QA systems to evolve over time
-    \end{itemize}
-  \end{alertblock}
-  \begin{alertblock}{Research Questions}
-    \begin{itemize}
-      \item How to detect unanswerable questions given the available knowledge
-      \item How to incorporate new knowledge with previous one
-      \item How to asses systems effectiveness
-        %talk about transfer Learning
+      \item Enable QA systems to adapt to new tasks.
     \end{itemize}
   \end{alertblock}
 \end{frame}
@@ -145,91 +145,91 @@
   \item Information evolve over time (dates, dead) there is a need to evolve over time.
 }
 
-% internship?
-\begin{frame}{Research Plan}
-  \metroset{block=fill}
-  \begin{alertblock}{1rst Year}
+\begin{frame}{Research Plan: Open Questions}
+  \begin{alertblock}{Research Questions}
     \begin{itemize}
-      \item Study state-of-the-art
-      \item Gather evaluation collections
-      \item Propose QA-LL system
-      \item Propose method to develop evaluation collections
+      \item How to detect unanswerable questions given the available knowledge
+      \item How to incorporate new knowledge with previous one
+      \item How to asses QA systems effectiveness
+      \item How to adapt QA systems to new tasks
     \end{itemize}
   \end{alertblock}
-
-  \begin{alertblock}{2nd Year}
-    \begin{itemize}
-      \item Develop collections for LL QA
-      \item Evaluation and analysis of results
-      \item Improvements from results
-      \item Detect new challanges
-    \end{itemize}
-  \end{alertblock}
-\end{frame}
-
-\begin{frame}{Research Plan}
-  \metroset{block=fill}
-  \begin{alertblock}{3rd Year}
-    \begin{itemize}
-      \item Development of QA-LL System
-      \item Evaluation and analysis of results
-      \item Final draft with implemented system
-    \end{itemize}
-  \end{alertblock}
-
-  \begin{alertblock}{4rd Year}
-    \begin{itemize}
-      \item Evaluation and final touches
-      \item Write thesis
-    \end{itemize}
-  \end{alertblock}
-\end{frame}
-
-\section{Outcomes}
-\begin{frame}{First Year Outcomes}
-  \alert{\Large Publications (older to newer):}
-  \begin{itemize}
-    \item QA-LL task proposal: \cite{penas2019continuous}
-    \item First evaluation collection: \cite{veron2020cooking}
-    \item Survey on dialogue systems: \cite{deriu2019survey}
-    \item Cross-lingual models: \cite{echegoyen2020crosslingual}
-    \item Lifelong Learning Transformers (work in progess)
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{First Year Outcomes}
-  \alert{\Large Question Answering-Lifelong Learning task proposal} \par
-
-  Given a KG, and an external resource such as a text collection in the same domain:
-  \begin{enumerate}
-    \item Decide whether a user utterance in Natural Language can be mapped or not into the KG and, if this is the case
-    \item Determine through which ones of the following ways the system must find a strategy to enrich the knowledge graph
-  \end{enumerate}
-  \begin{block}{Outputs}
-    \item Shared task
-  \end{block}
 \end{frame}
 
 \note[itemize]{%
-  \item Work with the whole consortium
-  \begin{itemize}
-    \item Declare a new class (or object type). 
-    \item Add a new instance of a class.
-    \item Declare a new relation.
-    \item Add a new triple to the KG.
-  \end{itemize}
+  \item There are plenty of research questions, but we will restrain to those.
 }
 
-\begin{frame}{First Year Outcomes}
-  \alert{\Large First evaluation collection:} \par
-
+% internship?
+\begin{frame}{Research Plan: First Year}
+  \alert{Goal}: Study the state-of-the-art
+  \vspace{0.2cm}
   \begin{itemize}
-    \item Extract information from \href{https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents}{Wikimedia Cookbook}.
-    \item Organize and structure information as Knowledge Graph.
-    \item Manually create both answerable and unanswerable questions from the KG.
-    \item Manually annotate questions and answers.
+    \item Related to Knowledge Graphs: \\
+      {\small Guillermo Echegoyen, Álvaro Rodrigo, Anselmo Peñas (2019). \textbf{Benchmarking Entity Linking for Question Answering over Knowledge Graphs}. Sociedad Espa\~nola de Procesamiento de Lenguaje Natural (PLN). Volume 63, pages 121-128. ISSN: 19897553, 11355948. DOI: 10.26342/2019-63-13. \cite{Echegoyen2019}}
   \end{itemize}
+  \begin{block}{Outcomes}
+    \begin{itemize}
+      \item 6 Entity Linking evaluation datasets.
+      \item EL has a higher impact over QA systems than usually though.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+% ToDo := Add Outcomes?
+\begin{frame}{Research Plan: First Year}
+  \alert{Goal}: Study the state-of-the-art
+  \vspace{0.2cm}
+  \begin{itemize}
+    \item Related to NLP and Dialogue Systems: \\
+      {\small Jan Deriu, Alvaro Rodrigo, Arantxa Otegi, Guillermo Echegoyen, Sophie Rosset, Eneko Agirre, Mark Cieliebak (2020). \textbf{Survey on evaluation methods for dialogue systems}. Artificial Intelligence Review. DOI: 10.1007/s10462-020-09866-x. \cite{jan_survey_2020}}
+  \end{itemize}
+  \begin{block}{Outcomes}
+    \begin{itemize}
+      \item Trend towards end-to-end, more cryptic systems, based on large amounts of data.
+      \item Trend towards less human involvement regarding evaluation. 
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Research Plan: First Year}
+  \alert{Goal}: Study the state-of-the-art
+  \vspace{0.2cm}
+  \begin{itemize}
+    \item Related to Lifelong Learning (WIP): \\
+      {\small Guillermo Echegoyen, Álvaro Rodrigo, Anselmo Peñas (2019). \textbf{Study of a Lifelong Learning Scenario for Question Answering}}
+  \end{itemize}
+  \begin{block}{Outcomes}
+    \begin{itemize}
+      \item Transfer learning between different extractive QA datasets.
+      \item Catastrophic forgetting is a big concern.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Research Plan: First Year}
+  \vspace{-0.1cm}
+  \alert{Goal}: Study the state-of-the-art
+  \vspace{0.1cm}
+  \begin{itemize}
+    \item Position papers (shared task proposal): \\
+      {\small Anselmo Peñas, Mathilde Veron, Camille Pradel, Arantxa Otegi, Guillermo Echegoyen and Alvaro Rodrigo (2019). \textbf{Continuous Learning for Question Answering. Dialogue Systems and Lifelong Learning}. Increasing Naturalness and Flexibility in Spoken Dialogue Interaction: 10th International Workshop on Spoken Dialogue Systems, Lecture Notes in Electrical Engineering, Springer. ISSN: 1876-1100 \cite{penas2019continuous}}
+  \end{itemize}
+  \begin{block}{Outcomes}
+    \begin{itemize}
+      \item Task: Determine mappings from utterances to a KG and means to enrich the KG.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Research Plan: First Year}
+  \vspace{-0.2cm}
+  \alert{Goal}: Study the state-of-the-art
+  \vspace{0.1cm}
+  \begin{itemize}
+    \item Position papers (LL Evaluation collection): \\
+      {\small Mathilde Veron, Anselmo Peñas, Guillermo Echegoyen, Somnath Banerjee, Sahar Ghannay, and Sophie Rosset (2020). \textbf{A Cooking Knowledge Graph and Benchmark for Question Answering Evaluation in Lifelong Learning scenarios}. Natural Language in the Database and Information Systems (NLDB), Lecture Notes in Computer Science, Springer 2020. Volume 12089, pags. 94-101. ISSN: 0302-9743 \cite{veron_nldb_2020}}
+  \end{itemize}
   \begin{block}{Outputs}
     \begin{itemize}
       \item Cooking Domain Knowledge graph
@@ -238,48 +238,27 @@
   \end{block}
 \end{frame}
 
-\note[itemize]{%
-  \item Work with LIMSI (France)
-}
-
-\begin{frame}{First Year Outcomes}
-  \alert{\Large Survey on Dialogue Systems} \par
-
-  Study the state-of-the-art in:
+\begin{frame}{Research Plan: First Year}
+  \vspace{-0.2cm}
+  \alert{Goal}: Study the state-of-the-art
+  \vspace{0.1cm}
   \begin{itemize}
-    \item Task Oriented Dialogue System
-    \item Conversational Dialogue Systems
-    \item Question Answering Dialogue Systems
-    \item Evaluation Datasets and Challenges
+    \item Lifelong Learning and transfer learning: \\
+      {\small Guillermo Echegoyen, Álvaro Rodrigo, Anselmo Peñas (en prensa). \textbf{Cross-lingual Training for Multiple-Choice Question Answering}. Sociedad Española de Procesamiento de Lenguaje Natural (PLN). Accepted in March 2020, Volume 64, September. ISSN: 1989-7553. \cite{echegoyen_sepln_2020}}
   \end{itemize}
+  \begin{block}{Outputs}
+    \begin{itemize}
+      \item Exams dataset: Difficulty affects human and machines in a similar way.
+      \item QA systems can be transferred to different tasks with acceptable performance, even in different languages.
+    \end{itemize}
+  \end{block}
 \end{frame}
 
-\note[itemize]{%
-  \item Work with ZHAW (Switzerland) and the rest of the consortium
-}
-
-\begin{frame}{First Year Outcomes}
-  \alert{\Large Cross Lingual Models} \par
-
-  \alert{Goal:} Train a model in a language and transfer learning to another one (and another task).
-  \input{./figures/cross_lingual_results.tex}
+\begin{frame}{Research Plan: Second Year}
 \end{frame}
 
-\note[itemize]{%
-  \item Not aimed to break SOTA, just a poc.
-  \item No hyper-parameter tuning applied
-}
-
-\begin{frame}{First Year: Outcomes}
-  \alert{\Large Lifelong Learning Transformers} \par
-
-  \alert{Goal:} Reuse knowledge from previous tasks to boost performance of a new one while preserving effectiveness.
-  
-  \alert{ToDo}
+\begin{frame}{Research Plan: Third \& Fourth Years}
 \end{frame}
-
-\note[itemize]{%
-}
 
 \section{Conclusions}
 \begin{frame}{First Year Conclusions}
@@ -300,16 +279,6 @@
 }
 
 \section{Related Challenges}
-\begin{frame}{Related Challenges}
-  \alert{\Large Literature grows quickly}
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{./figures/ai_papers_arxiv_alpha.png}
-  \end{center}
-  \begin{flushright}
-    {\tiny Artificial Intelligence Index Report 2019, Stanford University}
-  \end{flushright}
-\end{frame}
-
 \begin{frame}{Related Challenges}
   \alert{\Large Trend towards Deep Learning}
   \begin{itemize}
@@ -336,6 +305,7 @@
   \end{center}
 \end{frame}
 
+% ToDo := Sort references by appearance
 \begin{frame}[allowframebreaks]{References}
   \bibliography{library}
   \bibliographystyle{abbrv}
