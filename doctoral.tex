@@ -14,8 +14,8 @@
   {\small Programme: Intelligent Systems}
 }
 \author{%
-  Guillermo Echegoyen\\%
-  {\color{gray}\footnotesize Advised by: \\$\-$ Anselmo Pe\~nas \\$\-$ Alvaro Rodrigo}\\%
+  \normalsize Guillermo Echegoyen\\%
+  {\color{gray}\small Advisors: \\$\-$ Anselmo Pe\~nas \\$\-$ Alvaro Rodrigo}\\%
 }
 
 % \institute{UNED ETS. Inform\'atica}
@@ -46,11 +46,11 @@
 \section{Who am I}
 \begin{frame}{Who am I}
   \begin{columns}[T,onlytextwidth]
-    \column{0.45\textwidth}
+    \column{0.5\textwidth}
     \begin{alertblock}{Background}
       \begin{itemize}
-        \item Software Engineering
-        \item AI Master
+        \item Software Engineering BSc
+        \item Artificial Intelligence MSc
       \end{itemize}
     \end{alertblock}
     \column{0.45\textwidth}
@@ -61,6 +61,7 @@
       \end{itemize}
     \end{alertblock}
   \end{columns}
+  \vspace{0.2cm}
   \begin{alertblock}{Currently}
     \begin{itemize}
       \item International project LIHLITH-KIQA (PI: Anselmo Pe\"nas). Question Answering that evolve over time.
@@ -92,13 +93,13 @@
   \begin{block}{Question Answering}
     \vspace{0.2cm}
     \textit{Systems that automatically answer questions posed by humans in a natural language} \\
-    \begin{alertblock}{Focus}
-      \begin{itemize}
-        \item Based on Knowledge Graphs
-        \item Based on other resources: Set of documents, search engines
-      \end{itemize}
-    \end{alertblock}
-    Applications:
+    \vspace{0.2cm}
+    \alert{\textbf{Focus}}
+    \begin{itemize}
+      \item Based on Knowledge Graphs
+      \item Based on other resources: Set of documents, search engines
+    \end{itemize}
+    \alert{\textbf{Applications}}
     \begin{itemize}
       \item Question Answering Systems are everywhere, from personal assistants to chatbots and IT ticket management.
     \end{itemize}
@@ -112,6 +113,7 @@
   \item Reading comprehension QA
 }
 
+% Change slide name
 \begin{frame}{Thesis Frame}
   Most QA systems:
   \begin{itemize}
@@ -148,10 +150,11 @@
 \begin{frame}{Research Plan: Open Questions}
   \begin{alertblock}{Research Questions}
     \begin{itemize}
+      \item How to assess QA systems effectiveness
+      \item How to adapt QA systems to new tasks
       \item How to detect unanswerable questions given the available knowledge
       \item How to incorporate new knowledge with previous one
-      \item How to asses QA systems effectiveness
-      \item How to adapt QA systems to new tasks
+      \item How machines and humans performance differ
     \end{itemize}
   \end{alertblock}
 \end{frame}
@@ -162,7 +165,7 @@
 
 % internship?
 \begin{frame}{Research Plan: First Year}
-  \alert{Goal}: Study the state-of-the-art
+  \alert{\textbf{Goal}}: Study the state-of-the-art
   \vspace{0.2cm}
   \begin{itemize}
     \item Related to Knowledge Graphs: \\
@@ -178,7 +181,7 @@
 
 % ToDo := Add Outcomes?
 \begin{frame}{Research Plan: First Year}
-  \alert{Goal}: Study the state-of-the-art
+  \alert{\textbf{Goal}}: Study the state-of-the-art
   \vspace{0.2cm}
   \begin{itemize}
     \item Related to NLP and Dialogue Systems: \\
@@ -193,7 +196,7 @@
 \end{frame}
 
 \begin{frame}{Research Plan: First Year}
-  \alert{Goal}: Study the state-of-the-art
+  \alert{\textbf{Goal}}: Study the state-of-the-art
   \vspace{0.2cm}
   \begin{itemize}
     \item Related to Lifelong Learning (WIP): \\
@@ -201,7 +204,7 @@
   \end{itemize}
   \begin{block}{Outcomes}
     \begin{itemize}
-      \item Transfer learning between different extractive QA datasets.
+      \item Transfer learning between different extractive QA datasets works.
       \item Catastrophic forgetting is a big concern.
     \end{itemize}
   \end{block}
@@ -209,7 +212,7 @@
 
 \begin{frame}{Research Plan: First Year}
   \vspace{-0.1cm}
-  \alert{Goal}: Study the state-of-the-art
+  \alert{\textbf{Goal}}: Study the state-of-the-art
   \vspace{0.1cm}
   \begin{itemize}
     \item Position papers (shared task proposal): \\
@@ -224,7 +227,7 @@
 
 \begin{frame}{Research Plan: First Year}
   \vspace{-0.2cm}
-  \alert{Goal}: Study the state-of-the-art
+  \alert{\textbf{Goal}}: Study the state-of-the-art
   \vspace{0.1cm}
   \begin{itemize}
     \item Position papers (LL Evaluation collection): \\
@@ -240,7 +243,7 @@
 
 \begin{frame}{Research Plan: First Year}
   \vspace{-0.2cm}
-  \alert{Goal}: Study the state-of-the-art
+  \alert{\textbf{Goal}}: Study the state-of-the-art
   \vspace{0.1cm}
   \begin{itemize}
     \item Lifelong Learning and transfer learning: \\
@@ -255,22 +258,44 @@
 \end{frame}
 
 \begin{frame}{Research Plan: Second Year}
+  \alert{\Large Assessing a lack of knowledge is key}
+  \begin{itemize}
+    \item Propose method to address unanswerable Questions
+    \item Propose method to incorporate new knowledge
+    \item Craft evaluation collections for the task
+  \end{itemize}
+  \alert{\Large Transfer Learning between languages \& tasks}
+  \begin{itemize}
+    \item Cross-lingual models
+    \item Multiple Reading Comprehension datasets
+  \end{itemize}
 \end{frame}
 
+\note[itemize]{%
+  \item Several MC collections come from human exams.
+  \item Assess how humans and machines performance differ.
+}
+
 \begin{frame}{Research Plan: Third \& Fourth Years}
+  \alert{\Large QA System capable of:}
+  \begin{itemize}
+    \item Learning new tasks without forgetting previous ones
+    \item Assessing what it doesn't know and trigger learning procedures
+    \item Integrating new knowledge with previous one
+    \item Adapting to new tasks
+  \end{itemize}
 \end{frame}
 
 \section{Conclusions}
 \begin{frame}{First Year Conclusions}
-  \begin{alertblock}{Experimentation is hard:}
-    \begin{itemize}
-      \item Money for value
-      \item Interpretability is difficult
-      \item Catastrophic forgetting is hard to overcome
-      \item We are far from real world QA systems
-      \item Ideal laboratory settings are far from real world use cases
-    \end{itemize}
-  \end{alertblock}
+  \alert{\Large Experimentation is hard}
+  \begin{itemize}
+    \item Money for value
+    \item Interpretability is not always clear
+    \item Catastrophic forgetting is hard to overcome
+    \item We are far from real world QA systems
+    \item Ideal laboratory settings are far from real world use cases
+  \end{itemize}
 \end{frame}
 
 \note[itemize]{%
@@ -278,15 +303,15 @@
   \item Deployed systems face many more problems and inconsistencies than laboratory environments.
 }
 
-\section{Related Challenges}
-\begin{frame}{Related Challenges}
+\begin{frame}{First Year Conclusions}
   \alert{\Large Trend towards Deep Learning}
   \begin{itemize}
     \item Large code base
-    \item Programming GPUs
+    \item Programming GPUs/TPUs
     \item Experiments are costly
     \item Cloud computing
-    \item Results interpretation not always clear
+    \item Models are not interpretable
+    \item Research grows exponentially
   \end{itemize}
 \end{frame}
 
@@ -299,9 +324,14 @@
 % outro: ToDo := Add cool quote
 \begin{frame}
   \begin{center}
+    \vspace{1.5cm}
     \Huge Thank you! \\
     \huge Questions? \\
-    \Large Guillermo Echegoyen
+    \vspace{1cm}
+    \flushright{%
+      \Large Guillermo Echegoyen \par
+      {\color{gray}\normalsize{ Advisors: \\ Anselmo Pe\~nas \\ \vspace{-0.2cm} Alvaro Rodrigo}}\\%
+    }
   \end{center}
 \end{frame}
 
